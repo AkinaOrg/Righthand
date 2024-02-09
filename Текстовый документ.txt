@@ -1,0 +1,10 @@
+import telebot
+import time
+
+bot = telebot.TeleBot('6891460496:AAHifsxna5lCo7mvq-LvatRn3-jnr_tpgt0')
+
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.reply_to(message, "Привет! Я бот для управления чатом. Напиши /help, чтобы узнать, что я умею.")
+
+bot.infinity_polling(none_stop=True)
